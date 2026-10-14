@@ -1,0 +1,27 @@
+$color-ink: #f4f6f9;
+$color-muted: #aab4c2;
+$color-background: #0e131a;
+$color-surface: #161d26;
+$color-accent: #dda73a;
+$color-focus: #38bdf8;
+$color-line: #2a3441;
+$font-display: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+$font-body: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$content-width: 72.5rem;
+$space-1: 0.5rem;
+$space-2: 1rem;
+$space-3: 1.5rem;
+$space-4: 2rem;
+$space-5: 3rem;
+
+:root {
+  --color-ink: #{$color-ink};
+  --color-muted: #{$color-muted};
+  --color-background: #{$color-background};
+  --color-surface: #{$color-surface};
+  --color-accent: #{$color-accent};
+  --color-focus: #{$color-focus};
+  --color-line: #{$color-line};
+  --font-display: #{$font-display};
+  --font-body: #{$font-body};
+}

@@ -1,0 +1,242 @@
+@use "tokens";
+
+@layer reset, base, layout, components;
+
+@layer reset {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  body,
+  h1,
+  h2,
+  h3,
+  p,
+  ul {
+    margin: 0;
+  }
+
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+}
+
+@layer base {
+  html {
+    font-size: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: tokens.$color-background;
+    color: tokens.$color-ink;
+    font: 1rem/1.6 tokens.$font-body;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  :focus-visible {
+    outline: 3px solid tokens.$color-focus;
+    outline-offset: 3px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: tokens.$font-display;
+    line-height: 1.15;
+  }
+
+  h1 {
+    font-size: clamp(2.25rem, 6vw, 4.5rem);
+    max-width: 12ch;
+  }
+
+  h2 {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+  }
+}
+
+@layer layout {
+  .container,
+  .site-header__inner {
+    width: min(100% - 3rem, tokens.$content-width);
+    margin-inline: auto;
+  }
+
+  .site-header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: tokens.$space-3;
+    padding-block: tokens.$space-3;
+  }
+
+  .intro {
+    padding-block: clamp(4rem, 12vw, 9rem);
+    border-block: 1px solid tokens.$color-line;
+  }
+
+  .intro__summary {
+    max-width: 48rem;
+    margin-top: tokens.$space-3;
+    color: tokens.$color-muted;
+    font-size: 1.125rem;
+  }
+
+  .dispatches {
+    padding-block: tokens.$space-5;
+  }
+
+  .section-heading {
+    margin-bottom: tokens.$space-4;
+  }
+
+  .site-footer {
+    padding-block: tokens.$space-4;
+    border-top: 3px double tokens.$color-accent;
+    color: tokens.$color-muted;
+    font-size: 0.875rem;
+  }
+}
+
+@layer components {
+  .skip-link {
+    position: absolute;
+    top: -4rem;
+    left: tokens.$space-2;
+    z-index: 1;
+    padding: tokens.$space-1 tokens.$space-2;
+    background: tokens.$color-accent;
+    color: tokens.$color-background;
+    font-weight: 700;
+  }
+
+  .skip-link:focus {
+    top: tokens.$space-2;
+  }
+
+  .brand {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: tokens.$space-1;
+    font-family: tokens.$font-display;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .brand__name {
+    font-size: 1.5rem;
+  }
+
+  .brand__divider,
+  .eyebrow,
+  .story-card__type {
+    color: tokens.$color-accent;
+  }
+
+  .brand__context {
+    color: tokens.$color-muted;
+    font-family: tokens.$font-body;
+    font-size: 0.8125rem;
+    font-weight: 400;
+  }
+
+  .primary-nav__list {
+    display: flex;
+    gap: tokens.$space-3;
+  }
+
+  .primary-nav a {
+    text-underline-offset: 0.25rem;
+  }
+
+  .primary-nav a:hover {
+    color: tokens.$color-accent;
+  }
+
+  .eyebrow,
+  .story-card__type {
+    margin-bottom: tokens.$space-1;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .story-card {
+    display: grid;
+    overflow: hidden;
+    border: 1px solid tokens.$color-line;
+    border-top: 3px solid tokens.$color-accent;
+    background: tokens.$color-surface;
+    container-type: inline-size;
+  }
+
+  .story-card__media {
+    min-height: 16rem;
+    background: repeating-conic-gradient(from -90deg at 50% 100%, #1d2733 0 4deg, #131a23 4deg 8deg);
+  }
+
+  .story-card__content {
+    padding: clamp(tokens.$space-3, 5vw, tokens.$space-5);
+  }
+
+  .story-card__title {
+    margin-bottom: tokens.$space-2;
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+  }
+
+  .story-card__content p:not(.story-card__type) {
+    margin-bottom: tokens.$space-3;
+    color: tokens.$color-muted;
+  }
+
+  .button {
+    display: inline-block;
+    padding: 0.75rem 1.25rem;
+    background: tokens.$color-accent;
+    color: tokens.$color-background;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .button:hover {
+    background: #f0be55;
+  }
+
+  @container (min-width: 48rem) {
+    .story-card {
+      grid-template-columns: 1.2fr 1fr;
+    }
+
+    .story-card__media {
+      min-height: 24rem;
+    }
+  }
+}
+
+@media (max-width: 42rem) {
+  .container,
+  .site-header__inner {
+    width: min(100% - 2rem, tokens.$content-width);
+  }
+
+  .site-header__inner,
+  .primary-nav__list {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
