@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles/main.css">
+  <script src="../js/story.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -63,16 +64,20 @@
           <p class="eyebrow">Accessible text alternative</p>
           <h2 id="transcript-title">Archival transcript</h2>
         </div>
-        <div class="transcript__line">
-          <time datetime="PT18S">00:00–00:18</time>
+        <div class="transcript__tools">
+          <label for="transcript-search">Search this transcript</label>
+          <input id="transcript-search" type="search" placeholder="Search words or speakers">
+        </div>
+        <div class="transcript__line" data-start="0" data-end="18">
+          <button class="transcript__timestamp" type="button" aria-label="Play from 00:00">00:00–00:18</button>
           <p class="transcript__sound">[Republic City Philharmonic brass fanfare plays]</p>
         </div>
-        <div class="transcript__line">
-          <time datetime="PT54S">00:19–00:54</time>
+        <div class="transcript__line" data-start="19" data-end="54">
+          <button class="transcript__timestamp" type="button" aria-label="Play from 00:19">00:19–00:54</button>
           <p><strong>Shiro Shinobi:</strong> “Good evening, listeners. Tonight we venture south to the sparkling domes of Zaofu.”</p>
         </div>
-        <div class="transcript__line transcript__line--current">
-          <time datetime="PT1M45S">00:55–01:45</time>
+        <div class="transcript__line transcript__line--current" data-start="55" data-end="105">
+          <button class="transcript__timestamp" type="button" aria-label="Play from 00:55">00:55–01:45</button>
           <p><strong>Suyin Beifong:</strong> “When we laid the foundations, the critics claimed metal was too rigid for living.”</p>
         </div>
       </section>

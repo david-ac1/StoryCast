@@ -267,7 +267,7 @@
   }
   .story-card__media {
     min-height: 16rem;
-    background: repeating-conic-gradient(from -90deg at 50% 100%, #1d2733 0 4deg, #131a23 4deg 8deg);
+    background: linear-gradient(90deg, rgba(14, 19, 26, 0.1), rgba(14, 19, 26, 0.35)), url("../media/images/metal-city-poster.jpg") center/cover;
   }
   .story-card__content {
     padding: clamp(1.5rem, 5vw, 3rem);
@@ -341,6 +341,23 @@
     margin-top: 3rem;
     padding-top: 2rem;
   }
+  .transcript__tools {
+    display: grid;
+    gap: 0.5rem;
+    max-width: 32rem;
+    margin-bottom: 1.5rem;
+  }
+  .transcript__tools label {
+    font-weight: 700;
+  }
+  .transcript__tools input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #5b6a7d;
+    background: #0e131a;
+    color: #f4f6f9;
+    font: inherit;
+  }
   .transcript__line {
     display: grid;
     grid-template-columns: 9rem 1fr;
@@ -351,6 +368,24 @@
   .transcript__line time {
     color: #dda73a;
     font-weight: 700;
+  }
+  .transcript__timestamp {
+    align-self: start;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #dda73a;
+    font: inherit;
+    font-weight: 700;
+    text-align: left;
+    cursor: pointer;
+  }
+  .transcript__timestamp:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.25rem;
+  }
+  .transcript__line[hidden] {
+    display: none;
   }
   .transcript__line--current {
     border-left: 4px solid #dda73a;
