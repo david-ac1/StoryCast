@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The Metal City in Motion, an accessible StoryCast visual chronicle about Zaofu.">
+  <title>The Metal City in Motion | StoryCast</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="../Index.HTML" aria-label="StoryCast home">
+        <span class="brand__name">StoryCast</span>
+        <span class="brand__divider" aria-hidden="true">//</span>
+        <span class="brand__context">Republic City Public Archive</span>
+      </a>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <ul class="primary-nav__list">
+          <li><a href="../Index.HTML">Dispatches</a></li>
+          <li><a href="../about.html">About &amp; Access</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="container story-page">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../Index.HTML">Home</a></li>
+          <li aria-current="page">The Metal City in Motion</li>
+        </ol>
+      </nav>
+
+      <header class="story-header">
+        <p class="eyebrow">Visual Chronicle · District 4</p>
+        <h1>The Metal City in Motion</h1>
+        <dl class="story-meta">
+          <div><dt>Narrator</dt><dd>Shiro Shinobi</dd></div>
+          <div><dt>Date</dt><dd>174 AG</dd></div>
+          <div><dt>Duration</dt><dd>3 min 45 sec</dd></div>
+          <div><dt>Access</dt><dd>Captions and transcript</dd></div>
+        </dl>
+      </header>
+
+      <figure class="media-figure">
+        <video class="story-video" controls preload="metadata" poster="../media/images/metal-city-poster.jpg" aria-describedby="media-description">
+          <source src="../media/video/metal-city.mp4" type="video/mp4">
+          <track kind="captions" srclang="en" src="../media/captions/metal-city-en.vtt" label="English captions" default>
+          Your browser does not support HTML video. Read the transcript below instead.
+        </video>
+        <figcaption id="media-description">Restored newsreel footage showing the first dome raised in Zaofu's metal courtyard. Captions and a full transcript are available.</figcaption>
+      </figure>
+
+      <section class="transcript" aria-labelledby="transcript-title">
+        <div class="section-heading">
+          <p class="eyebrow">Accessible text alternative</p>
+          <h2 id="transcript-title">Archival transcript</h2>
+        </div>
+        <div class="transcript__line">
+          <time datetime="PT18S">00:00–00:18</time>
+          <p class="transcript__sound">[Republic City Philharmonic brass fanfare plays]</p>
+        </div>
+        <div class="transcript__line">
+          <time datetime="PT54S">00:19–00:54</time>
+          <p><strong>Shiro Shinobi:</strong> “Good evening, listeners. Tonight we venture south to the sparkling domes of Zaofu.”</p>
+        </div>
+        <div class="transcript__line transcript__line--current">
+          <time datetime="PT1M45S">00:55–01:45</time>
+          <p><strong>Suyin Beifong:</strong> “When we laid the foundations, the critics claimed metal was too rigid for living.”</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 174 AG Republic City Public Archive. All transmissions held in public trust.</p>
+    </div>
+  </footer>
+</body>
+</html>

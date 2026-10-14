@@ -93,6 +93,29 @@
     padding-block: tokens.$space-5;
   }
 
+  .page-intro,
+  .accessibility-features,
+  .keyboard-guide,
+  .feedback,
+  .story-page {
+    padding-block: tokens.$space-5;
+  }
+
+  .page-intro {
+    border-block: 1px solid tokens.$color-line;
+  }
+
+  .page-intro__summary {
+    max-width: 52rem;
+    margin-top: tokens.$space-3;
+    color: tokens.$color-muted;
+    font-size: 1.125rem;
+  }
+
+  .story-page {
+    max-width: 72.5rem;
+  }
+
   .section-heading {
     margin-bottom: tokens.$space-4;
   }
@@ -102,6 +125,109 @@
     border-top: 3px double tokens.$color-accent;
     color: tokens.$color-muted;
     font-size: 0.875rem;
+  }
+
+  .accessibility-features,
+  .keyboard-guide,
+  .feedback,
+  .transcript {
+    border-top: 1px solid tokens.$color-line;
+  }
+
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: tokens.$space-3;
+  }
+
+  .feature-panel {
+    padding: tokens.$space-3;
+    border-top: 3px solid tokens.$color-accent;
+    background: tokens.$color-surface;
+  }
+
+  .feature-panel h3 {
+    margin-bottom: tokens.$space-1;
+  }
+
+  .feature-panel p,
+  .story-header p,
+  .media-figure figcaption {
+    color: tokens.$color-muted;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: tokens.$color-surface;
+  }
+
+  caption {
+    padding-bottom: tokens.$space-1;
+    color: tokens.$color-muted;
+    text-align: left;
+  }
+
+  th,
+  td {
+    padding: tokens.$space-2;
+    border: 1px solid tokens.$color-line;
+    text-align: left;
+  }
+
+  th {
+    background: #1b2531;
+  }
+
+  kbd {
+    padding: 0.125rem 0.5rem;
+    border: 1px solid #5b6a7d;
+    border-bottom-width: 3px;
+    background: tokens.$color-background;
+    font-size: 0.875rem;
+  }
+
+  .feedback-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: tokens.$space-3;
+    padding: tokens.$space-4;
+    border-top: 3px solid tokens.$color-accent;
+    background: tokens.$color-surface;
+  }
+
+  .form-field {
+    display: grid;
+    gap: tokens.$space-1;
+  }
+
+  .form-field--full {
+    grid-column: 1 / -1;
+  }
+
+  label {
+    font-weight: 700;
+  }
+
+  label span {
+    color: tokens.$color-muted;
+    font-size: 0.875rem;
+    font-weight: 400;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    border: 1px solid #5b6a7d;
+    background: tokens.$color-background;
+    color: tokens.$color-ink;
+    font: inherit;
+    padding: 0.75rem;
+  }
+
+  textarea {
+    min-height: 8rem;
+    resize: vertical;
   }
 }
 
@@ -211,6 +337,91 @@
     background: #f0be55;
   }
 
+  .breadcrumbs ol {
+    display: flex;
+    flex-wrap: wrap;
+    gap: tokens.$space-1;
+    margin-bottom: tokens.$space-4;
+  }
+
+  .breadcrumbs li + li::before {
+    content: "/";
+    margin-right: tokens.$space-1;
+    color: tokens.$color-muted;
+  }
+
+  .breadcrumbs [aria-current] {
+    color: tokens.$color-muted;
+  }
+
+  .story-header {
+    margin-bottom: tokens.$space-4;
+  }
+
+  .story-meta {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: tokens.$space-3;
+    border: 1px solid tokens.$color-line;
+  }
+
+  .story-meta div {
+    padding: tokens.$space-1 tokens.$space-2;
+    border-right: 1px solid tokens.$color-line;
+  }
+
+  .story-meta dt {
+    color: tokens.$color-muted;
+    font-size: 0.8125rem;
+  }
+
+  .story-meta dd {
+    font-weight: 700;
+  }
+
+  .media-figure {
+    margin: 0;
+  }
+
+  .story-video {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #000;
+  }
+
+  .media-figure figcaption {
+    padding-top: tokens.$space-2;
+  }
+
+  .transcript {
+    margin-top: tokens.$space-5;
+    padding-top: tokens.$space-4;
+  }
+
+  .transcript__line {
+    display: grid;
+    grid-template-columns: 9rem 1fr;
+    gap: tokens.$space-3;
+    padding: tokens.$space-3;
+    border-bottom: 1px solid tokens.$color-line;
+  }
+
+  .transcript__line time {
+    color: tokens.$color-accent;
+    font-weight: 700;
+  }
+
+  .transcript__line--current {
+    border-left: 4px solid tokens.$color-accent;
+    background: #1b2531;
+  }
+
+  .transcript__sound {
+    color: tokens.$color-muted;
+    font-style: italic;
+  }
+
   @container (min-width: 48rem) {
     .story-card {
       grid-template-columns: 1.2fr 1fr;
@@ -232,6 +443,25 @@
   .primary-nav__list {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .feature-grid,
+  .feedback-form {
+    grid-template-columns: 1fr;
+  }
+
+  .form-field--full {
+    grid-column: auto;
+  }
+
+  .story-meta div {
+    flex: 1 1 50%;
+    border-bottom: 1px solid tokens.$color-line;
+  }
+
+  .transcript__line {
+    grid-template-columns: 1fr;
+    gap: tokens.$space-1;
   }
 }
 

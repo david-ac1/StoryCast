@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Learn how StoryCast makes Republic City stories accessible to every citizen.">
+  <title>About &amp; Access | StoryCast</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="Index.HTML" aria-label="StoryCast home">
+        <span class="brand__name">StoryCast</span>
+        <span class="brand__divider" aria-hidden="true">//</span>
+        <span class="brand__context">Republic City Public Archive</span>
+      </a>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <ul class="primary-nav__list">
+          <li><a href="Index.HTML">Dispatches</a></li>
+          <li><a href="about.html" aria-current="page">About &amp; Access</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-intro" aria-labelledby="page-title">
+      <div class="container">
+        <p class="eyebrow">About the archive</p>
+        <h1 id="page-title">Universal media for every citizen</h1>
+        <p class="page-intro__summary">A recording nobody can access is a recording lost. Every transmission we publish includes captions, a verbatim transcript, and keyboard-friendly controls.</p>
+      </div>
+    </section>
+
+    <section class="accessibility-features" aria-labelledby="features-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Our access commitment</p>
+          <h2 id="features-title">What every transmission includes</h2>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-panel">
+            <h3>Synchronized captions</h3>
+            <p>Video stories include WebVTT captions with speaker names and meaningful sound descriptions.</p>
+          </article>
+          <article class="feature-panel">
+            <h3>Verbatim transcripts</h3>
+            <p>Full text sits beside each recording, timestamped and searchable for quick reference.</p>
+          </article>
+          <article class="feature-panel">
+            <h3>Keyboard access</h3>
+            <p>Landmarks, visible focus, large targets, and semantic controls support keyboard and screen-reader users.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="keyboard-guide" aria-labelledby="keyboard-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Player controls</p>
+          <h2 id="keyboard-title">Keyboard navigation</h2>
+        </div>
+        <table>
+          <caption>Shortcuts available when the media player has focus.</caption>
+          <thead>
+            <tr><th scope="col">Key</th><th scope="col">Action</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row"><kbd>Space</kbd> or <kbd>K</kbd></th><td>Play or pause</td></tr>
+            <tr><th scope="row"><kbd>M</kbd></th><td>Mute or unmute</td></tr>
+            <tr><th scope="row"><kbd>C</kbd></th><td>Turn captions on or off</td></tr>
+            <tr><th scope="row"><kbd>Tab</kbd></th><td>Move focus to the next control</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="feedback" aria-labelledby="feedback-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Help improve the archive</p>
+          <h2 id="feedback-title">Accessibility feedback</h2>
+        </div>
+        <form class="feedback-form" action="#" method="post">
+          <div class="form-field">
+            <label for="name">Name</label>
+            <input id="name" name="name" autocomplete="name">
+          </div>
+          <div class="form-field">
+            <label for="email">Email <span>(optional)</span></label>
+            <input id="email" name="email" type="email" autocomplete="email">
+          </div>
+          <div class="form-field form-field--full">
+            <label for="message">Comments</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <div class="form-field--full">
+            <button class="button" type="submit">Send accessibility feedback</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 174 AG Republic City Public Archive. All transmissions held in public trust.</p>
+    </div>
+  </footer>
+</body>
+</html>
