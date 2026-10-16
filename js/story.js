@@ -4,6 +4,7 @@
   var video = document.querySelector('.story-video');
   var search = document.querySelector('#transcript-search');
   var durationLabel = document.querySelector('[data-duration]');
+  var mediaStatus = document.querySelector('[data-media-status]');
   var lines = Array.from(document.querySelectorAll('.transcript__line'));
 
   if (!video || !search || !lines.length) {
@@ -54,6 +55,15 @@
     setCurrentLine();
   }
 
+  function setMediaStatus(message) {
+    if (!mediaStatus) {
+      return;
+    }
+
+    mediaStatus.textContent = message;
+    mediaStatus.hidden = message === '';
+  }
+
   lines.forEach(function (line) {
     var timestamp = line.querySelector('.transcript__timestamp');
 
@@ -75,6 +85,15 @@
 
   video.addEventListener('loadedmetadata', syncTranscriptToVideo);
   video.addEventListener('durationchange', syncTranscriptToVideo);
+  video.addEventListener('loadeddata', function () {
+    setMediaStatus('');
+  });
+  video.addEventListener('error', function () {
+    setMediaStatus('The video could not be loaded. The transcript remains available below.');
+  });
+  video.addEventListener('stalled', function () {
+    setMediaStatus('Video loading has paused. The transcript remains available while the connection recovers.');
+  });
   video.addEventListener('timeupdate', setCurrentLine);
   if (video.readyState >= 1) {
     syncTranscriptToVideo();

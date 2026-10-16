@@ -324,6 +324,88 @@
     color: tokens.$color-muted;
   }
 
+  .archive-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: tokens.$space-1;
+    margin-bottom: tokens.$space-3;
+  }
+
+  .archive-filter {
+    padding: 0.65rem 1rem;
+    border: 1px solid tokens.$color-line;
+    background: tokens.$color-surface;
+    color: tokens.$color-ink;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .archive-filter[aria-pressed="true"],
+  .archive-filter:hover {
+    border-color: tokens.$color-accent;
+    background: tokens.$color-accent;
+    color: tokens.$color-background;
+  }
+
+  .archive-results {
+    margin: tokens.$space-4 0 tokens.$space-2;
+    color: tokens.$color-muted;
+    font-size: 0.875rem;
+  }
+
+  .story-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: tokens.$space-3;
+  }
+
+  .story-tile {
+    overflow: hidden;
+    border: 1px solid tokens.$color-line;
+    background: tokens.$color-surface;
+  }
+
+  .story-tile[hidden] {
+    display: none;
+  }
+
+  .story-tile__media {
+    min-height: 9rem;
+    border-bottom: 1px solid tokens.$color-line;
+    background: repeating-conic-gradient(from -90deg at 50% 100%, #1d2733 0 4deg, #131a23 4deg 8deg);
+  }
+
+  .story-tile__media--harbor {
+    background: linear-gradient(140deg, #31475c, #111820 55%, #c0843c);
+  }
+
+  .story-tile__media--radio {
+    background: radial-gradient(circle at 50% 40%, #dda73a 0 0.4rem, transparent 0.45rem), repeating-radial-gradient(circle at 50% 40%, #2e3c4d 0 0.15rem, #10161e 0.2rem 0.45rem);
+  }
+
+  .story-tile__media--reel {
+    background: linear-gradient(90deg, #212d38 0 12%, #dda73a 12% 15%, #151c25 15% 85%, #dda73a 85% 88%, #212d38 88%);
+  }
+
+  .story-tile__body {
+    padding: tokens.$space-2;
+  }
+
+  .story-tile h3 {
+    margin-bottom: tokens.$space-1;
+  }
+
+  .story-tile__body p:not(.story-card__type) {
+    margin-bottom: tokens.$space-2;
+    color: tokens.$color-muted;
+  }
+
+  .story-tile__meta {
+    color: tokens.$color-muted;
+    font-size: 0.8125rem;
+  }
+
   .button {
     display: inline-block;
     padding: 0.75rem 1.25rem;
@@ -392,6 +474,18 @@
 
   .media-figure figcaption {
     padding-top: tokens.$space-2;
+  }
+
+  .media-status {
+    margin-top: tokens.$space-2;
+    padding: tokens.$space-2;
+    border-left: 3px solid tokens.$color-accent;
+    background: tokens.$color-surface;
+    color: tokens.$color-muted;
+  }
+
+  .media-status[hidden] {
+    display: none;
   }
 
   .transcript {
@@ -487,7 +581,8 @@
   }
 
   .feature-grid,
-  .feedback-form {
+  .feedback-form,
+  .story-grid {
     grid-template-columns: 1fr;
   }
 

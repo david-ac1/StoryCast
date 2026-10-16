@@ -9,6 +9,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="styles/main.css">
+	<script src="js/home.js?v=1" defer></script>
 </head>
 <body>
 	<a class="skip-link" href="#main-content">Skip to main content</a>
@@ -45,8 +46,13 @@
 					<p class="eyebrow">Browse the archive</p>
 					<h2 id="dispatches-title">Recent Stories</h2>
 				</div>
+				<div class="archive-filters" role="group" aria-label="Filter stories by media type">
+					<button type="button" class="archive-filter" data-filter="all" aria-pressed="true">All stories</button>
+					<button type="button" class="archive-filter" data-filter="video" aria-pressed="false">Video chronicles</button>
+					<button type="button" class="archive-filter" data-filter="audio" aria-pressed="false">Audio broadcasts</button>
+				</div>
 
-				<article class="story-card">
+				<article class="story-card" data-media-type="video">
 					<div class="story-card__media" aria-hidden="true"></div>
 					<div class="story-card__content">
 						<p class="story-card__type">Visual Chronicle · District 4</p>
@@ -55,6 +61,37 @@
 						<a class="button" href="story/metal-city.html">View story and transcript</a>
 					</div>
 				</article>
+
+				<p class="archive-results" data-archive-results role="status" aria-live="polite">Showing 4 stories</p>
+				<div class="story-grid">
+					<article class="story-tile" data-media-type="video">
+						<div class="story-tile__media story-tile__media--harbor" aria-hidden="true"></div>
+						<div class="story-tile__body">
+							<p class="story-card__type">Video Chronicle · Harbor Ward</p>
+							<h3>Dockside Voices</h3>
+							<p>Dock workers reflect on the changing trade routes around Republic City.</p>
+							<span class="story-tile__meta">07:30 · Captions available</span>
+						</div>
+					</article>
+					<article class="story-tile" data-media-type="audio">
+						<div class="story-tile__media story-tile__media--radio" aria-hidden="true"></div>
+						<div class="story-tile__body">
+							<p class="story-card__type">Audio Broadcast · District 1</p>
+							<h3>When the Arena Went Silent</h3>
+							<p>A radio account of the night the Pro-Bending finals stopped mid-match.</p>
+							<span class="story-tile__meta">12:08 · Transcript available</span>
+						</div>
+					</article>
+					<article class="story-tile" data-media-type="audio">
+						<div class="story-tile__media story-tile__media--reel" aria-hidden="true"></div>
+						<div class="story-tile__body">
+							<p class="story-card__type">Audio Broadcast · Uptown</p>
+							<h3>Serials of the Airwaves</h3>
+							<p>A short history of radio drama and the voices that shaped the city.</p>
+							<span class="story-tile__meta">21:14 · Transcript available</span>
+						</div>
+					</article>
+				</div>
 			</div>
 		</section>
 	</main>
