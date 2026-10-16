@@ -9,7 +9,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="styles/main.css">
-	<script src="js/home.js?v=1" defer></script>
+	<script src="js/home.js?v=2" defer></script>
 </head>
 <body>
 	<a class="skip-link" href="#main-content">Skip to main content</a>
@@ -47,12 +47,12 @@
 					<h2 id="dispatches-title">Recent Stories</h2>
 				</div>
 				<div class="archive-filters" role="group" aria-label="Filter stories by media type">
-					<button type="button" class="archive-filter" data-filter="all" aria-pressed="true">All stories</button>
-					<button type="button" class="archive-filter" data-filter="video" aria-pressed="false">Video chronicles</button>
-					<button type="button" class="archive-filter" data-filter="audio" aria-pressed="false">Audio broadcasts</button>
+					<button type="button" class="archive-filter" data-filter="all" aria-pressed="true">All videos</button>
+					<button type="button" class="archive-filter" data-filter="scene" aria-pressed="false">Full scenes</button>
+					<button type="button" class="archive-filter" data-filter="archive" aria-pressed="false">Archive history</button>
 				</div>
 
-				<article class="story-card" data-media-type="video">
+				<article class="story-card" data-media-type="scene">
 					<div class="story-card__media" aria-hidden="true"></div>
 					<div class="story-card__content">
 						<p class="story-card__type">Visual Chronicle · District 4</p>
@@ -64,31 +64,34 @@
 
 				<p class="archive-results" data-archive-results role="status" aria-live="polite">Showing 4 stories</p>
 				<div class="story-grid">
-					<article class="story-tile" data-media-type="video">
+					<article class="story-tile" data-media-type="archive">
 						<div class="story-tile__media story-tile__media--harbor" aria-hidden="true"></div>
 						<div class="story-tile__body">
-							<p class="story-card__type">Video Chronicle · Harbor Ward</p>
-							<h3>Dockside Voices</h3>
-							<p>Dock workers reflect on the changing trade routes around Republic City.</p>
-							<span class="story-tile__meta">07:30 · Captions available</span>
+							<p class="story-card__type">Video Chronicle · Red Lotus Archive</p>
+							<h3>History of the Red Lotus</h3>
+							<p>A full-scene archive transmission tracing the history and threat of the Red Lotus.</p>
+							<span class="story-tile__meta">10:58 · Video</span>
+							<a class="story-tile__link" href="media/video/red-lotus.mp4">Watch video</a>
 						</div>
 					</article>
-					<article class="story-tile" data-media-type="audio">
+					<article class="story-tile" data-media-type="scene">
 						<div class="story-tile__media story-tile__media--radio" aria-hidden="true"></div>
 						<div class="story-tile__body">
-							<p class="story-card__type">Audio Broadcast · District 1</p>
-							<h3>When the Arena Went Silent</h3>
-							<p>A radio account of the night the Pro-Bending finals stopped mid-match.</p>
-							<span class="story-tile__meta">12:08 · Transcript available</span>
+							<p class="story-card__type">Video Chronicle · Spirit World</p>
+							<h3>Korra Fights Unalaq</h3>
+							<p>A full-scene transmission of Korra's fight with Unalaq in the Spirit World.</p>
+							<span class="story-tile__meta">05:45 · Video</span>
+							<a class="story-tile__link" href="media/video/spirit-world-unalaq.mp4">Watch video</a>
 						</div>
 					</article>
-					<article class="story-tile" data-media-type="audio">
+					<article class="story-tile" data-media-type="scene">
 						<div class="story-tile__media story-tile__media--reel" aria-hidden="true"></div>
 						<div class="story-tile__body">
-							<p class="story-card__type">Audio Broadcast · Uptown</p>
-							<h3>Serials of the Airwaves</h3>
-							<p>A short history of radio drama and the voices that shaped the city.</p>
-							<span class="story-tile__meta">21:14 · Transcript available</span>
+							<p class="story-card__type">Video Chronicle · Pro-Bending Arena</p>
+							<h3>Fire Ferrets vs. Wolf Bats</h3>
+							<p>The final Pro-Bending battle between the Fire Ferrets and the Wolf Bats.</p>
+							<span class="story-tile__meta">06:55 · Video</span>
+							<a class="story-tile__link" href="media/video/fire-ferrets-wolf-bats.mp4">Watch video</a>
 						</div>
 					</article>
 				</div>

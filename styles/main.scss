@@ -377,15 +377,15 @@
   }
 
   .story-tile__media--harbor {
-    background: linear-gradient(140deg, #31475c, #111820 55%, #c0843c);
+    background: linear-gradient(140deg, rgba(14, 19, 26, 0.1), rgba(14, 19, 26, 0.45)), url("../media/images/red-lotus.jpg") center / cover;
   }
 
   .story-tile__media--radio {
-    background: radial-gradient(circle at 50% 40%, #dda73a 0 0.4rem, transparent 0.45rem), repeating-radial-gradient(circle at 50% 40%, #2e3c4d 0 0.15rem, #10161e 0.2rem 0.45rem);
+    background: linear-gradient(140deg, rgba(14, 19, 26, 0.1), rgba(14, 19, 26, 0.45)), url("../media/images/spirit-world-unalaq.jpg") center / cover;
   }
 
   .story-tile__media--reel {
-    background: linear-gradient(90deg, #212d38 0 12%, #dda73a 12% 15%, #151c25 15% 85%, #dda73a 85% 88%, #212d38 88%);
+    background: linear-gradient(140deg, rgba(14, 19, 26, 0.1), rgba(14, 19, 26, 0.45)), url("../media/images/fire-ferrets-wolf-bats.jpg") center / cover;
   }
 
   .story-tile__body {
@@ -404,6 +404,14 @@
   .story-tile__meta {
     color: tokens.$color-muted;
     font-size: 0.8125rem;
+  }
+
+  .story-tile__link {
+    display: inline-block;
+    margin-top: tokens.$space-1;
+    color: tokens.$color-accent;
+    font-weight: 700;
+    text-underline-offset: 0.25rem;
   }
 
   .button {
